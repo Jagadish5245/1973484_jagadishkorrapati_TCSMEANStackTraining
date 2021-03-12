@@ -1,0 +1,17 @@
+.divFontClass{
+    font-size: larger;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-style: italic;
+}
+.h1background{
+    background-color: blue;
+    background-position: center;
+    text-align: center;
+}
+.pclass{
+    padding: 10px;
+   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+    border: solid red 10px;
+}
+
