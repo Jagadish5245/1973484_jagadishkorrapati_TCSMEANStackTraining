@@ -11,7 +11,7 @@ function insertNewRecord(data){
 
     var body = table.getElementsByTagName("tbody")[0];
 
-    //var newRow = body.insertRow(body.length);
+    var newRow = body.insertRow(body.length);
     for(var i = 0; i < data.length; i++){
         var newRow = body.insertRow(body.length);
         var cell1 = newRow.insertCell(0);
