@@ -1,41 +1,16 @@
-var blogs=[];   
+function addBlog(){
+    var title = document.getElementById("title").value;
+    var desc = document.getElementById("desc").value;
+    var imageInfo = document.getElementById("imageId").files[0].name;
+    //imageInfo.src = URL.createObjectURL(event.target.files[0]);
+
+    var data = '<div class="col-md-4"><div class="card mb-4 box-shadow"><img class="card-img-top" src="'+imageInfo+'" id="imageInfo" style="height: 225px; width: 100%; display: block;"><div class="card-body"><label>Title: </label><p class="card-text" id="titleInfo">'+title+'</p></div><div class="card-body"><label>Description :</label><p class="card-text" id="titleInfo">'+desc+'</p></div></div></div>';
+    console.log(title)
+    console.log(desc);
+    console.log(imageInfo);
+
+    var div = document.getElementById("dynamic");
+    div.innerHTML += data;
+    document.getElementById("client").reset();
     
-function onFormSubmit(){
-    var data=readFormData();
-    resetData();
-    //blogs.push(data);
-    populateBlogs(data);
-}
-function readFormData(){
-    var obj ={}
-    obj.title = document.getElementById("title").value;
-    obj.blogText = document.getElementById("blog_text").value;
-    
-    console.log(obj);
-    return obj;
-}
-
-
-function populateBlogs(data){
-    var table = document.getElementById("blog_items")
-
-    var body = table.getElementsByTagName("tbody")[0];
-
-    
-        var newRow = body.insertRow(0);
-        var cell1 = newRow.insertCell(0);
-            cell1.innerHTML= "Title: " + data.title;
-
-        newRow = body.insertRow(1);
-
-        var cell2 = newRow.insertCell(0);
-            cell2.innerHTML= "Description: " + data.blogText;
-        
-       
-}
-
-function resetData(){
-    document.getElementById("title").value="";
-    document.getElementById("blog_text").value="";
-   
 }

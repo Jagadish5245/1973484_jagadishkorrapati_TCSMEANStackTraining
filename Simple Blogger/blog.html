@@ -4,37 +4,59 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <title>Document</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-  <script src="myBlog.js"></script>
+    <script src="blogs.js"></script>
 </head>
-
 <body>
-    <div class="container">
-        <div>
-          <div class="form-group">
-            <label for="title">Blog title:</label>
-            <input type="text" class="form-control" id="title">
-          </div>
-          <div class="form-group">          
-            <label for="exampleFormControlTextarea2">Post a Blog</label>
-            <textarea class="form-control rounded-0" id="blog_text" rows="3"></textarea>
-          </div> 
-         
-          <button type="submit" class="btn btn-default" onclick="onFormSubmit()" >Add Blog</button>
-          
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Simply Blogging</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="nav justify-content-end">
+            <li class="nav-item ">
+              <a class="nav-link" href="#">Add Blog </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact</a>
+            </li>
+          </ul>
         </div>
+      </nav>
+    <form id="client">
+        <div class="form-group">
 
-       <table class="table" id="blog_items">
-        <tbody>
-          <td id="title" ></td>
-          <div id="blogText"></div>
-          <img src="" id="imageId"/>
-        </tbody>
-       </table>
-         
-    </div>   
+    <label>Title :</label>   <input type="text" id="title" class="form-control"/>
+    </div>
+    <div class="form-group">
+    <label>Description : </label> <textarea class="form-control" type="text" id="desc">
+        </textarea>
+        </div>
+        <div class="form-group">
+            <label>Select Image</label>
+    <input class="form-control-file" type="file" id="imageId"/>
+    </div>
+    <input class="btn btn-primary" type="button" value="Add Blog" 
+    onclick="addBlog()"/> 
+    </form >
+    <hr/>
+    <div>
+        
+    </div>
+    <div class="container">
+    <div class="row" id="dynamic">
+
+    </div></div>
+    
+    
 </body>
-</html>  
+</html>
