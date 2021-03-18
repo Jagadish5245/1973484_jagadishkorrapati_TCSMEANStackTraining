@@ -10,7 +10,7 @@ function readFormData(){
     var obj ={}
     obj.title = document.getElementById("title").value;
     obj.blogText = document.getElementById("blog_text").value;
-    obj.imageId=document.getElementById("imageId").files[0].name;
+    
     console.log(obj);
     return obj;
 }
@@ -31,13 +31,11 @@ function populateBlogs(data){
         var cell2 = newRow.insertCell(0);
             cell2.innerHTML= "Description: " + data.blogText;
         
-        newRow = body.insertRow(2);
-        var cell3=newRow.insertCell(0);
-            cell3.innerHTML=" " + data.imageId;
+       
 }
 
 function resetData(){
     document.getElementById("title").value="";
     document.getElementById("blog_text").value="";
-    document.getElementById("imageId").value="";
+   
 }

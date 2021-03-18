@@ -22,18 +22,16 @@
             <label for="exampleFormControlTextarea2">Post a Blog</label>
             <textarea class="form-control rounded-0" id="blog_text" rows="3"></textarea>
           </div> 
-          <div class="form-group">
-            <input type="file" id="imageId">
-          </div>
-          <button type="submit" class="btn btn-default" onclick="onFormSubmit()" >Submit</button>
-          <button type="reset" class="btn btn-default" onclick="resetData()" >Reset</button>
+         
+          <button type="submit" class="btn btn-default" onclick="onFormSubmit()" >Add Blog</button>
+          
         </div>
 
        <table class="table" id="blog_items">
         <tbody>
           <td id="title" ></td>
-          <td id="blogText"></td>
-          <td src="" id="imageId"></td>
+          <div id="blogText"></div>
+          <img src="" id="imageId"/>
         </tbody>
        </table>
          
