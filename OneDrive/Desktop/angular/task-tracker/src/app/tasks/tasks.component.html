@@ -1,0 +1,36 @@
+<h2>Task Traker</h2>
+<form #tsRef="ngForm" (ngSubmit)="storeTasks(tsRef.value)">
+    <mat-form-field>
+        <mat-label>Id</mat-label>
+        <input matInput type="text" name="Id" ngModel/>
+     </mat-form-field><br/>
+     <mat-form-field>
+        <mat-label>Name</mat-label>
+        <input matInput type="text" name="name" ngModel/>
+     </mat-form-field><br/>
+     <mat-form-field>
+        <mat-label>Tasks</mat-label>
+        <input matInput type="text" name="tasks" ngModel/>
+     </mat-form-field><br/>
+     <mat-form-field>
+        <mat-label>Deadline</mat-label>
+        <input matInput type="date" name="date" ngModel/>
+     </mat-form-field><br/>
+     <button mat-stroked-button color="primary" type="submit">Submit</button>
+     
+     <table>
+         <tr>
+             <th>User Id</th>
+             <th>Name</th>
+             <th>Tasks</th>
+             <th>Date</th>
+         </tr>
+         <tr *ngFor ="let task of settasks">
+             <td>{{task.Id}}</td>
+             <td>{{task.name}}</td>
+             <td>{{task.tasks}}</td>
+             <td>{{task.date}}</td>
+
+         </tr>
+     </table>
+</form>
